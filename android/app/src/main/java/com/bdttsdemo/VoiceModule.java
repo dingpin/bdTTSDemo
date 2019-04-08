@@ -34,7 +34,12 @@ public class VoiceModule extends ReactContextBaseJavaModule {
 
     @Override
     public void onCatalystInstanceDestroy() {
-        this.mSpeechSynthesizer.release();
+        try{
+            this.mSpeechSynthesizer.release();
+        }catch (Exception e)
+        {
+
+        }
         super.onCatalystInstanceDestroy();
     }
 }

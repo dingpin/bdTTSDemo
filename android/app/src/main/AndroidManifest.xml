@@ -17,6 +17,8 @@
       android:icon="@mipmap/ic_launcher"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+        <!--百度语音合成在android9.0里不发音，在sdk27里好的，在28里坏的；在android9.0，sdk为28的时候，http协议不能正常访问，导致发音失败，添加下面这句代码-->
+        <!--<uses-library android:name="org.apache.http.legacy" android:required="false"/>-->
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
